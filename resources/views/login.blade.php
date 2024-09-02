@@ -43,9 +43,9 @@
           
               <hr class="my-4">
           
-              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-block btn-success mb-2" type="submit">
+              {{-- <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-block btn-success mb-2" type="submit">
                   <i class="fas fa-user-plus me-2"></i>Sign Up
-              </button>
+              </button> --}}
           </form>
           
         </div>

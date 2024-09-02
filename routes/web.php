@@ -35,22 +35,13 @@ Route::fallback(function () {
 Route::get('/login' ,[login_users::class,'index'])->name('login.index');
 Route::get('/logout', [login_users::class, 'logout'])->name('logout');
 Route::post('/login/store' ,[login_users::class,'login'])->name('login.store');
+Route::get('/index', [UserController::class, 'index1'])->name('home1');
 
+Route::get('/' ,[login_users::class,'index2'])->name('home');
 
 // Route::middleware(['AlreadyLoggedIn'])->group(function () {
 
-            Route::get('/index', [UserController::class, 'index1'])->name('home');
-
-            
-
-
             Route::get('/generate-pdf/{id}',[PDFController::class ,'generatepdf'])->name('pdf.generate'); ;
-
-
-
-
-
-
 
 
             // Route to list all employees

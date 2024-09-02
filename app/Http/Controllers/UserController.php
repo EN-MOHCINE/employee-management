@@ -12,14 +12,12 @@ use App\Models\User; // Ensure the correct namespace for the User model
 class UserController extends Controller
 {
     public function __construct() {
-        $this->middleware('AlreadyLoggedIn');
+        $this->middleware(['AlreadyLoggedIn' ,'CheckAdmin']);
     }
 
-
-
-    public function index1() {
-        return view('index');
-    }
+        public function index1() {
+            return view('index');
+        }
 
     public function index()
     {

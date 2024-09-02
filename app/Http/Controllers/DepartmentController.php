@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 class DepartmentController extends Controller
 {
     public function __construct() {
-        $this->middleware('AlreadyLoggedIn');
+        $this->middleware(['AlreadyLoggedIn' ,'CheckAdmin']);
     }
     /**
      * Display a listing of the resource.

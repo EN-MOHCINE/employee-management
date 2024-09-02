@@ -2,7 +2,7 @@
 @section("content")
 <div class="d-flex justify-content-between align-items-center">
     <!-- Home button on the left -->
-    <a href="{{ route('home') }}" class="btn btn-default-primary">
+    <a href="{{ route('home1') }}" class="btn btn-default-primary">
         <i class="fa-solid fa-arrow-left" style="color: #ffffff; background-color: Green; border-radius: 12px; padding: 0.2cm;"></i>
     </a>
 

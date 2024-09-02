@@ -13,12 +13,17 @@ class login_users extends Controller
 
 
 
+    public function index2() {
+        return view('home');
+    }
+
     public function index () {
         return view('login');
-    } 
+    }
     public function login(Request $request)
     {
         session()->put('AlreadyLoggedIn', FALSE);
+        session()->put('user', null);
 
         // Validate the request
         $validator = Validator::make($request->all(), [
@@ -52,6 +57,7 @@ class login_users extends Controller
     public function logout() {
         session()->forget('AlreadyLoggedIn');
         session()->forget('user');
+        session()->flush();
         
         return redirect('/login');
     }
