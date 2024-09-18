@@ -7,6 +7,7 @@
     <link href="/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('asstes/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-6.6.0-web/css/all.min.css') }}">
+    <link rel="icon" href="{{ asset('asstes/icon-user.jpg') }}" type="image/icon type">
 
 </head>
 
