@@ -48,6 +48,7 @@
             <tr>
                 {{-- <td>{{ $user->id }}</td> --}}
                 <td>
+                    <img src="{{ asset('mohcine/'.$user->picture) }}" alt="User Picture" style="width: 50px; height: 50px; border-radius: 50%;">
                     <img src="{{ asset('storage/'.$user->picture) }}" alt="User Picture" style="width: 50px; height: 50px; border-radius: 50%;">
                 </td>
                 <td>{{ $user->name }}</td>

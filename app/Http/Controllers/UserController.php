@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
 use App\Models\User; // Ensure the correct namespace for the User model
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -104,12 +105,13 @@ class UserController extends Controller
 
         if ($request->hasFile('picture')) {
             $file = $request->file('picture');
-            $path = $file->store('');
+            $path = $file->storeAs('profiluser', $file->getClientOriginalName());
             $user->picture = $path;
         }
 
         $user->save();
 
+        // Storage::put('testfile.txt', 'This is a test.');
         return redirect()->route('users.index')->with('success', 'User updated successfully');
     }
 
