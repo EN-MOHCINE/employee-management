@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="{{ asset('asstes/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-6.6.0-web/css/all.min.css') }}">
     <link rel="icon" href="{{ asset('asstes/icon-user.jpg') }}" type="image/icon type">
+    {{-- <script src="{{ asset('asstes/js/app.jsx') }}"></script>
+
+    @vite(['resources/js/app.jsx']) --}}
+
 
 </head>
 
@@ -41,10 +45,12 @@
 
 
 
-
-
+            <div id="react"></div>
+            <script src="{{ mix('js/app.jsx') }}"></script>
 
             <script src="/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
             <link rel="stylesheet" href="{{ asset('asstes/css/styles.css') }}">
+            {{-- <script src="{{ asset('asstes/js/app.jsx') }}"></script> --}}
+            {{-- @vite(['resources/js/app.jsx']) --}}
         </body>
 </html>

@@ -9,6 +9,7 @@ use App\Http\Controllers\login_users;
 use App\Http\Controllers\PDFController;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\UsersExport;
+use App\Http\Controllers\ReactController;
 use App\Mail\DepartmentCreatedMail;
 use Illuminate\Support\Facades\Mail;
 
@@ -121,4 +122,21 @@ Route::get('/' ,[login_users::class,'index2'])->name('home');
 
             // Route to delete a specific user by ID
             Route::delete('users/{id}', [UserController::class,'destroy'])->name('users.destroy');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // react 
+            Route::get('/componentreact', [ReactController::class, 'index'])->name('employees.index');
+
 // });
