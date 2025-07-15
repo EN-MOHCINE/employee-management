@@ -23,6 +23,7 @@ class CheckAdmin
         } else if ($userRole == "utilisateur") {
             return redirect("/");
         }
+            return $next($request);
 
     }
 }

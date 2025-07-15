@@ -28,7 +28,7 @@ Route::get('/index', [UserController::class, 'index1'])->name('home1');
 
 Route::get('/' ,[login_users::class,'index2'])->name('home');
 
-// Route::middleware(['AlreadyLoggedIn'])->group(function () {
+Route::middleware(['AlreadyLoggedIn'])->group(function () {
 
             Route::get('/generate-pdf/{id}',[PDFController::class ,'generatepdf'])->name('pdf.generate'); ;
 
@@ -139,4 +139,4 @@ Route::get('/' ,[login_users::class,'index2'])->name('home');
             // react 
             Route::get('/componentreact', [ReactController::class, 'index'])->name('employees.index');
 
-// });
+});
